@@ -1278,7 +1278,7 @@ def create_bt_socket(interface=None):
     sock = None
     try:
         sock = socket.socket(family=socket.AF_BLUETOOTH,
-                             type=socket.SOCK_RAW,
+                             type=socket.SOCK_STREAM,
                              proto=socket.BTPROTO_HCI)
         sock.setblocking(False)
         if platform.system() == "Linux":
